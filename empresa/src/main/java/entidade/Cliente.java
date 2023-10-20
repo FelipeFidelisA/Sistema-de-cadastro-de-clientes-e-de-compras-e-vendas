@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package entidade;
 
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-/**
- *
- * @author aluno
- */
 public class Cliente {
     private Integer id;
     
@@ -31,8 +23,9 @@ public class Cliente {
         connection con = (connection) DriverManager.getConnection(
                "jdbc:mysql://(ip):3306/(nome do bd)",
                 "root", "123456789");
-        PreparedStatement p = con.Statement(
-            "insert into pessoas(nome, telefone) values(?,?)");
+        PreparedStatement p;
+        p = con.Statement(
+                "insert into pessoas(nome, telefone) values(?,?)");
      }
 
     public Integer getId() {
@@ -81,6 +74,16 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    private static class connection {
+
+        public connection() {
+        }
+
+        private PreparedStatement Statement(String insert_into_pessoasnome_telefone_values) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
     }
     
     
