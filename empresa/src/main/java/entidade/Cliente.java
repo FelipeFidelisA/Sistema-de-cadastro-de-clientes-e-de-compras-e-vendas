@@ -4,29 +4,30 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class Cliente {
+
     private Integer id;
-    
+
     private String primeiroNome;
-    
+
     private String sobrenome;
-    
+
     private String email;
-    
+
     private String cpf;
-    
+
     private String telefone;
 
     public Cliente() {
     }
-    
-    public void inserir() throws Exception{
+
+    public void inserir() throws Exception {
         connection con = (connection) DriverManager.getConnection(
-               "jdbc:mysql://(ip):3306/(nome do bd)",
+                "jdbc:mysql://(ip):3306/(nome do bd)",
                 "root", "123456789");
         PreparedStatement p;
         p = con.Statement(
                 "insert into pessoas(nome, telefone) values(?,?)");
-     }
+    }
 
     public Integer getId() {
         return id;
@@ -85,6 +86,5 @@ public class Cliente {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     }
-    
-    
+
 }
