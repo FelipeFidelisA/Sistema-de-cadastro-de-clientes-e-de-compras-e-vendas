@@ -25,6 +25,5 @@
             <version>RELEASE190</version>
         </dependency>
     </dependencies>
-
-    
+    <name>cadastrodeprodutos</name>
 </project>
