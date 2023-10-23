@@ -22,8 +22,8 @@ public class Cliente {
 
     public void inserir() throws Exception {
         connection con = (connection) DriverManager.getConnection(
-                "jdbc:mysql://(ip):3306/(nome do bd)",
-                "root", "123456789");
+                "jdbc:mysql://192.168.0.9:3306/empresa",
+                "root", "321654");
         PreparedStatement p;
         p = con.Statement(
                 "insert into pessoas(nome, telefone) values(?,?)");
