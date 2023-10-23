@@ -4,9 +4,9 @@
  */
 package janela;
 
-public class CadastroCliente extends javax.swing.JFrame {
+public class Cadastrar extends javax.swing.JFrame {
 
-    public CadastroCliente() {
+    public Cadastrar() {
         initComponents();
     }
 
@@ -87,9 +87,9 @@ public class CadastroCliente extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(6, 6, 6)
                 .addComponent(txtsobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -129,7 +129,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CadastroCliente().setVisible(true);
+                new Cadastrar().setVisible(true);
             }
         });
     }
@@ -149,4 +149,10 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtsobrenome;
     private javax.swing.JTextField txttelefone;
     // End of variables declaration//GEN-END:variables
+
+    private static class Salvar {
+
+        public Salvar() {
+        }
+    }
 }
