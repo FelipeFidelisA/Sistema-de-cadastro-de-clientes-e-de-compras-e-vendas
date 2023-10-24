@@ -42,8 +42,13 @@ public class Cadastrar extends javax.swing.JFrame {
         });
 
         btnsalvar.setText("Salvar");
+        btnsalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalvarActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setText("Telefone");
+        jLabel3.setText("CPF");
 
         txtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,9 +56,9 @@ public class Cadastrar extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("E-mail");
+        jLabel4.setText("Telefone");
 
-        jLabel5.setText("CPF");
+        jLabel5.setText("E-mail");
 
         jLabel6.setText("Nome Completo");
 
@@ -72,14 +77,14 @@ public class Cadastrar extends javax.swing.JFrame {
                     .addComponent(txtsobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
                     .addComponent(txtcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(txttelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btncancelar)
                         .addGap(145, 145, 145)
-                        .addComponent(btnsalvar))))
+                        .addComponent(btnsalvar))
+                    .addComponent(jLabel5)))
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -124,6 +129,10 @@ public class Cadastrar extends javax.swing.JFrame {
     private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtemailActionPerformed
+
+    private void btnsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalvarActionPerformed
+        /// TODO add your handling code here:
+    }//GEN-LAST:event_btnsalvarActionPerformed
 
     public static void main(String args[]) {
         

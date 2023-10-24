@@ -1,90 +1,42 @@
 package entidade;
 
+import empresa.Conexao;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Cliente {
 
     private Integer id;
-
-    private String primeiroNome;
-
-    private String sobrenome;
-
+    private String nome;
+    private String telefone;
     private String email;
-
     private String cpf;
 
-    private String telefone;
-
-    public Cliente() {
-    }
-
-    public void inserir() throws Exception {
-        connection con = (connection) DriverManager.getConnection(
-                "jdbc:mysql://192.168.0.9:3306/empresa",
-                "root", "321654");
-        PreparedStatement p;
-        p = con.Statement(
-                "insert into pessoas(nome, telefone) values(?,?)");
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getPrimeiroNome() {
-        return primeiroNome;
-    }
-
-    public void setPrimeiroNome(String primeiroNome) {
-        this.primeiroNome = primeiroNome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    public Cliente(String nome, String telefone, String email, String cpf) {
+        this.nome = nome;
+        this.telefone = telefone;
         this.email = email;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
+    public void inserir() {
+        System.out.println("inserir...");
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
+        Connection conexao = new Conexao().getConexao();
 
-    private static class connection {
-
-        public connection() {
+        String sql = "INSERT INTO tb_aluno (nome, telefone, email, cpf) VALUES (?, ?, ?, ?)";
+        try {
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, this.nome);
+            stmt.setString(2, this.telefone);
+            stmt.setString(3, this.email);
+            stmt.setString(4, this.cpf);
+            stmt.execute();
+            stmt.close();
+        } catch (SQLException e) {
+            throw new RuntimeException();
         }
-
-        private PreparedStatement Statement(String insert_into_pessoasnome_telefone_values) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
     }
-
 }
