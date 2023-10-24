@@ -47,12 +47,12 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtsobrenome" min="-2" pref="293" max="-2" attributes="0"/>
+                  <Component id="txtNome" min="-2" pref="293" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtemail" min="-2" pref="293" max="-2" attributes="0"/>
-                  <Component id="txtcpf" min="-2" pref="293" max="-2" attributes="0"/>
+                  <Component id="txtTelefone" min="-2" pref="293" max="-2" attributes="0"/>
+                  <Component id="txtEmail" min="-2" pref="293" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txttelefone" min="-2" pref="293" max="-2" attributes="0"/>
+                  <Component id="txtCpf" min="-2" pref="293" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="btncancelar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="145" pref="145" max="-2" attributes="0"/>
@@ -75,19 +75,19 @@
               <EmptySpace pref="12" max="32767" attributes="0"/>
               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="txtsobrenome" min="-2" max="-2" attributes="0"/>
+              <Component id="txtNome" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="txtemail" min="-2" max="-2" attributes="0"/>
+              <Component id="txtTelefone" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="txtcpf" min="-2" max="-2" attributes="0"/>
+              <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="txttelefone" min="-2" max="-2" attributes="0"/>
+              <Component id="txtCpf" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btncancelar" min="-2" max="-2" attributes="0"/>
@@ -120,9 +120,9 @@
         <Property name="text" type="java.lang.String" value="CPF"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtemail">
+    <Component class="javax.swing.JTextField" name="txtTelefone">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtemailActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefoneActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -130,21 +130,24 @@
         <Property name="text" type="java.lang.String" value="Telefone"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtcpf">
+    <Component class="javax.swing.JTextField" name="txtEmail">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="E-mail"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txttelefone">
+    <Component class="javax.swing.JTextField" name="txtCpf">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome Completo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtsobrenome">
+    <Component class="javax.swing.JTextField" name="txtNome">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
