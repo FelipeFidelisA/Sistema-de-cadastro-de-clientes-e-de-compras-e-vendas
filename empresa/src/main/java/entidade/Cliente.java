@@ -62,7 +62,7 @@ public class Cliente {
 
         Connection conexao = new Conexao().getConexao();
 
-        String sql = "INSERT INTO tb_aluno (nome, telefone, email, cpf) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (nome, telefone, email, cpf) VALUES (?, ?, ?, ?)";
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, this.nome);

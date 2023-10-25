@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package janela;
 
 import entidade.Cliente;
@@ -19,8 +15,8 @@ public class Cadastrar extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
-        btncancelar = new javax.swing.JButton();
-        btnsalvar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnSalvar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -37,17 +33,17 @@ public class Cadastrar extends javax.swing.JFrame {
         setTitle("Cadastro de Cliente");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btncancelar.setText("Cancelar");
-        btncancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelarActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
-        btnsalvar.setText("Salvar");
-        btnsalvar.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsalvarActionPerformed(evt);
+                btnSalvarActionPerformed(evt);
             }
         });
 
@@ -62,6 +58,12 @@ public class Cadastrar extends javax.swing.JFrame {
         jLabel4.setText("Telefone");
 
         jLabel5.setText("E-mail");
+
+        txtCpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCpfActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Nome Completo");
 
@@ -90,9 +92,9 @@ public class Cadastrar extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btncancelar)
+                        .addComponent(btnCancelar)
                         .addGap(145, 145, 145)
-                        .addComponent(btnsalvar))
+                        .addComponent(btnSalvar))
                     .addComponent(jLabel5)))
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
@@ -121,8 +123,8 @@ public class Cadastrar extends javax.swing.JFrame {
                 .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btncancelar)
-                    .addComponent(btnsalvar))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnSalvar))
                 .addGap(33, 33, 33))
         );
 
@@ -131,15 +133,15 @@ public class Cadastrar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btncancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelarActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_btncancelarActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefoneActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefoneActionPerformed
 
-    private void btnsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalvarActionPerformed
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         /// TODO add your handling code here:
         try {
             Cliente c = new Cliente();
@@ -157,15 +159,20 @@ public class Cadastrar extends javax.swing.JFrame {
 
         }
 
-    }//GEN-LAST:event_btnsalvarActionPerformed
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCpfActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Cadastrar().setVisible(true);
             }
@@ -173,8 +180,8 @@ public class Cadastrar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncancelar;
-    private javax.swing.JButton btnsalvar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnSalvar;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -188,9 +195,4 @@ public class Cadastrar extends javax.swing.JFrame {
     private javax.swing.JTextField txtTelefone;
     // End of variables declaration//GEN-END:variables
 
-    private static class Salvar {
-
-        public Salvar() {
-        }
-    }
 }
