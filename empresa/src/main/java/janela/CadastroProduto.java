@@ -1,6 +1,7 @@
 package janela;
 
 import entidade.Produto;
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
 public class CadastroProduto extends javax.swing.JFrame {
@@ -101,13 +102,16 @@ public class CadastroProduto extends javax.swing.JFrame {
 
             p.setNome(txtNome.getText());
             p.setDescricao(txtDescricao.getText());
-            p.setDouble(txtPreco.getText());
+            String precoText = txtPreco.getText();
+            double preco = Double.parseDouble(precoText);
+            p.setPreco(preco);
+            
 
             p.inserirProduto();
 
             JOptionPane.showMessageDialog(this, "Salvo com sucesso");
-        } catch (Exception e) {
-            throw new RuntimeException("Erro: " + e);
+        } catch (HeadlessException e) {
+            e.printStackTrace();
 
         }
     }//GEN-LAST:event_btnSalvarActionPerformed

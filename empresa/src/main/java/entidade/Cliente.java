@@ -67,7 +67,7 @@ public class Cliente {
                 stmt.setString(2, this.telefone);
                 stmt.setString(3, this.email);
                 stmt.setString(4, this.cpf);
-                stmt.executeUpdate();
+                int executeUpdate = stmt.executeUpdate();
             }
         } catch (SQLException e) {
             throw new RuntimeException();

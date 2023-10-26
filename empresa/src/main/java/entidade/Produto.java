@@ -22,7 +22,6 @@ public class Produto {
     }
 
     public Produto() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public String getNome() {
@@ -33,7 +32,7 @@ public class Produto {
         return descricao;
     }
 
-    public double getpreco() {
+    public double getPreco() {
         return preco;
     }
     
@@ -68,6 +67,10 @@ public class Produto {
     }
 
     public void setDouble(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setString(String text) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
