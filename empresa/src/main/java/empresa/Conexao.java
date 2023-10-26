@@ -8,11 +8,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author rafael
- */
-
 public class Conexao {
 	public static final String SERVIDOR = "jdbc:mysql://localhost:3306/empresa  ";
 	public static final String USUARIO = "root";

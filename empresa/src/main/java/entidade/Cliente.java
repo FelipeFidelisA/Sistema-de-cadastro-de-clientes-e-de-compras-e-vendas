@@ -62,13 +62,13 @@ public class Cliente {
 
         String sql = "INSERT INTO cliente (nome, telefone, email, cpf) VALUES (?, ?, ?, ?)";
         try {
-            PreparedStatement stmt = conexao.prepareStatement(sql);
-            stmt.setString(1, this.nome);
-            stmt.setString(2, this.telefone);
-            stmt.setString(3, this.email);
-            stmt.setString(4, this.cpf);
-            stmt.executeUpdate();
-            stmt.close();
+            try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
+                stmt.setString(1, this.nome);
+                stmt.setString(2, this.telefone);
+                stmt.setString(3, this.email);
+                stmt.setString(4, this.cpf);
+                stmt.executeUpdate();
+            }
         } catch (SQLException e) {
             throw new RuntimeException();
         }
