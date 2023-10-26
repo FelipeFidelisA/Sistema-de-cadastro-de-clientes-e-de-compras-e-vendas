@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 
 public class Conexao {
-	public static final String SERVIDOR = "jdbc:mysql://localhost:3307/cadastro_cliente";
+	public static final String SERVIDOR = "jdbc:mysql://localhost:3306/empresa  ";
 	public static final String USUARIO = "root";
 	public static final String SENHA = "321654";
 

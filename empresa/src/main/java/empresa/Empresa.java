@@ -4,6 +4,8 @@
 
 package empresa;
 
+import janela.Login;
+
 /**
  *
  * @author aluno
@@ -11,6 +13,7 @@ package empresa;
 public class Empresa {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Login l = new Login();
+        l.setVisible(true);
     }
 }

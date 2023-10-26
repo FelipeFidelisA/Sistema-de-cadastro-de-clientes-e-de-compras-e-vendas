@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `empresa`.`produto` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `preco` DOUBLE NULL,
+  `categoria` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idproduto_UNIQUE` (`id` ASC) VISIBLE,
   UNIQUE INDEX `nome_UNIQUE` (`nome` ASC) VISIBLE,

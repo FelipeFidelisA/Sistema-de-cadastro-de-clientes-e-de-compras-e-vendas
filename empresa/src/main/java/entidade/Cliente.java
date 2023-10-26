@@ -2,7 +2,6 @@ package entidade;
 
 import empresa.Conexao;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -15,7 +14,6 @@ public class Cliente {
     private String cpf;
 
     public Cliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public String getNome() {
@@ -69,7 +67,7 @@ public class Cliente {
             stmt.setString(2, this.telefone);
             stmt.setString(3, this.email);
             stmt.setString(4, this.cpf);
-            stmt.execute();
+            stmt.executeUpdate();
             stmt.close();
         } catch (SQLException e) {
             throw new RuntimeException();

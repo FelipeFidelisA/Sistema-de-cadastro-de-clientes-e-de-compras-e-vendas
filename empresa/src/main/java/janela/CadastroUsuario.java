@@ -3,9 +3,9 @@ package janela;
 import entidade.Cliente;
 import javax.swing.JOptionPane;
 
-public class Cadastrar extends javax.swing.JFrame {
+public class CadastroUsuario extends javax.swing.JFrame {
 
-    public Cadastrar() {
+    public CadastroUsuario() {
         initComponents();
     }
 
@@ -29,7 +29,7 @@ public class Cadastrar extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jEditorPane1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Cliente");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -74,7 +74,6 @@ public class Cadastrar extends javax.swing.JFrame {
         });
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jLabel7.setText("Registre-se");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -155,8 +154,7 @@ public class Cadastrar extends javax.swing.JFrame {
 
             JOptionPane.showMessageDialog(this, "Salvo com sucesso");
         } catch (Exception e) {
-            throw new RuntimeException("Erro: " + e);
-
+            e.printStackTrace();
         }
 
     }//GEN-LAST:event_btnSalvarActionPerformed
@@ -174,7 +172,7 @@ public class Cadastrar extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Cadastrar().setVisible(true);
+                new CadastroUsuario().setVisible(true);
             }
         });
     }
