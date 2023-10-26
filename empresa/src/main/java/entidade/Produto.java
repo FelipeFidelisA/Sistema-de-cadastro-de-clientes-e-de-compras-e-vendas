@@ -12,10 +12,12 @@ import java.sql.SQLException;
 public class Produto {
 
     private String nome;
+    private String descricao;
     private double preco;
 
-    public Produto(String nome, double preco) {
+    public Produto(String nome, String descricao, double preco) {
         this.nome = nome;
+        this.descricao = descricao;
         this.preco = preco;
     }
 
@@ -26,6 +28,10 @@ public class Produto {
     public String getNome() {
         return nome;
     }
+    
+    public String getDescricao(){
+        return descricao;
+    }
 
     public double getpreco() {
         return preco;
@@ -33,6 +39,10 @@ public class Produto {
     
     public void setNome(String nome){
         this.nome = nome;
+    }
+    
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
     }
     
     public void setPreco(double preco){
@@ -44,11 +54,12 @@ public class Produto {
 
         Connection conexao = new Conexao().getConexao();
 
-        String sql = "INSERT INTO produto (nome, preco) VALUES (?, ?)";
+        String sql = "INSERT INTO produto (nome, descricao, preco) VALUES (?, ?, ?)";
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, this.nome);
-            stmt.setDouble(2, this.preco);
+            stmt.setString(2, this.descricao);
+            stmt.setDouble(3, this.preco);
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
