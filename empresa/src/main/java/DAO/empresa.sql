@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `cadastroCliente`.`produto` (
   UNIQUE INDEX `idproduto_UNIQUE` (`id` ASC) VISIBLE,
   UNIQUE INDEX `nome_UNIQUE` (`nome` ASC) VISIBLE,
   UNIQUE INDEX `descricao_UNIQUE` (`descricao` ASC) VISIBLE,
-  UNIQUE INDEX `preco_UNIQUE` (`preco` ASC) VISIBLE)
+  UNIQUE INDEX `preco_UNIQUE` (`preco` ASC) VISIBLE),
 ENGINE = InnoDB;
 
 

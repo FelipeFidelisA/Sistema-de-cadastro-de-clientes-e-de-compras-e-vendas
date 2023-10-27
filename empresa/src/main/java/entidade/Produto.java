@@ -62,15 +62,7 @@ public class Produto {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
-    }
-
-    public void setDouble(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setString(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

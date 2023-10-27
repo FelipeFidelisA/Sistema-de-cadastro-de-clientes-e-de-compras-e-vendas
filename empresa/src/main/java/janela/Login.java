@@ -31,10 +31,10 @@ public class Login extends javax.swing.JFrame {
         jColorChooser3 = new javax.swing.JColorChooser();
         jColorChooser4 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txtuser = new javax.swing.JTextField();
+        txtLogin = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btnsair = new javax.swing.JButton();
         btnentrar = new javax.swing.JButton();
@@ -46,7 +46,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 142, 282, 20));
+        jPanel1.add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 142, 282, 20));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -58,12 +58,12 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Usuário");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        txtuser.addActionListener(new java.awt.event.ActionListener() {
+        txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtuserActionPerformed(evt);
+                txtLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(txtuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 282, -1));
+        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 282, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Senha");
@@ -93,9 +93,9 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
+    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtuserActionPerformed
+    }//GEN-LAST:event_txtLoginActionPerformed
 
     private void btnsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsairActionPerformed
         this.dispose();        // TODO add your handling code here:
@@ -104,6 +104,7 @@ public class Login extends javax.swing.JFrame {
     private void btnentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnentrarActionPerformed
         Principal p = new Principal();
         p.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_btnentrarActionPerformed
 
     /**
@@ -129,8 +130,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField txtuser;
+    private javax.swing.JTextField txtLogin;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 
     
