@@ -29,6 +29,8 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         btnVoltar = new javax.swing.JToggleButton();
+        txtCpf1 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -55,7 +57,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jLabel7.setText("Registre-se");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Nome Completo");
@@ -70,7 +72,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 txtCpfActionPerformed(evt);
             }
         });
-        jPanel2.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 340, -1));
+        jPanel2.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 340, -1));
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +88,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
 
         btnSalvar.setBackground(new java.awt.Color(153, 255, 255));
         btnSalvar.setText("Salvar");
@@ -95,11 +97,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
+        jPanel2.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("CPF");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        jLabel3.setText("Senha");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
 
         txtTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,15 +115,27 @@ public class CadastroUsuario extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
         jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 340, -1));
 
+        btnVoltar.setBackground(new java.awt.Color(153, 255, 255));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, -1));
+        jPanel2.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 80, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 320));
+        txtCpf1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCpf1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtCpf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 340, -1));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("CPF");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 390));
 
         getAccessibleContext().setAccessibleDescription("");
 
@@ -170,6 +184,10 @@ public class CadastroUsuario extends javax.swing.JFrame {
         this.dispose(); 
     }//GEN-LAST:event_btnVoltarActionPerformed
 
+    private void txtCpf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpf1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCpf1ActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -190,10 +208,12 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtCpf;
+    private javax.swing.JTextField txtCpf1;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtTelefone;

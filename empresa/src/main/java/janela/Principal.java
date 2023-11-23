@@ -46,6 +46,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 102, 102));
 
         jLabel1.setText("Principal");
 
